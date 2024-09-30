@@ -20,7 +20,7 @@ def simplify():
 
 window = tk.Tk()
 
-labelRequirement = tk.Label(text = "Ingresa un polinomio, (ejemplo: 2x*2 + 3x*2 - 2x + 4)")
+labelRequirement = tk.Label(text = "Ingresa un polinomio, (ejemplo: 2x*2+3x*2-2x+4)")
 labelRequirement.pack()
 
 entryRequirement = tk.Entry()
