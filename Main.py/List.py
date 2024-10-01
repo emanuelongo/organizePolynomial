@@ -17,14 +17,14 @@ class main:
       elif self.polynomial[i] == "x" and self.polynomial[i + 1] == "*" and (self.polynomial[i + 2] in self.exponentsList): #EL EXPONENTE ESTÁ REGISTRADO Y MAYOR QUE 1
         for j in range(len(self.exponentsList)):
           if self.exponentsList[j] == self.polynomial[i + 2]:
-            self.objectsLinkedList[j].append( self.polynomial[i - 2] + self.polynomial[i - 1])
+            self.objectsLinkedList[j].append(self.polynomial[i - 2] + self.polynomial[i - 1])
       
   def connectLists(self):
     n = len(self.exponentsList)
     for i in range(n):
         swapped = False
         for j in range(0, n - i - 1):
-            if self.exponentsList[j] > self.exponentsList[j + 1]:
+            if self.exponentsList[j] < self.exponentsList[j + 1]:
                 self.exponentsList[j], self.exponentsList[j + 1] = self.exponentsList[j + 1], self.exponentsList[j]
                 self.objectsLinkedList[j], self.objectsLinkedList[j + 1] = self.objectsLinkedList[j + 1], self.objectsLinkedList[j]
                 swapped = True
@@ -75,3 +75,6 @@ class LinkedList:
       self.tail.next = new_node
       self.tail = new_node
     self.length += 1
+
+mine = main("+2x*3-3x*3+5x*5")
+print(mine.printPolynomial())

@@ -1,10 +1,12 @@
 import tkinter as tk
 from List import main
 
+objectPolynomialAdd = None
+
 def add():
     entry = str(entryRequirement.get())
-        
-    result = tk.Label(text = "" + main(entry).printPolynomial())
+    objectPolynomialAdd = main(entry)
+    result = tk.Label(text = "" + objectPolynomialAdd.printPolynomial())
     result.pack()
 
 def order():
