@@ -1,3 +1,4 @@
+import simplify
 class main:
   def __init__(self, polynomial: str):
     self.polynomial = polynomial
@@ -75,6 +76,3 @@ class LinkedList:
       self.tail.next = new_node
       self.tail = new_node
     self.length += 1
-
-mine = main("+2x*3-3x*3+5x*5")
-print(mine.printPolynomial())
