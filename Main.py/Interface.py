@@ -1,9 +1,10 @@
 import tkinter as tk
+from List import main
 
 def add():
     entry = str(entryRequirement.get())
-    #DEBO PONER LA LÓGICA PARA EL BACK END Y QUE LUEGO ME DEVUELVA EL VALOR
-    result = tk.Label(text = "" + entry)
+        
+    result = tk.Label(text = "" + main(entry).printPolynomial())
     result.pack()
 
 def order():
@@ -20,7 +21,7 @@ def simplify():
 
 window = tk.Tk()
 
-labelRequirement = tk.Label(text = "Ingresa un polinomio, (ejemplo: 2x*2+3x*2-2x+4)")
+labelRequirement = tk.Label(text = "Ingresa un polinomio, (ejemplo: +2x*2-1x*1+4x*0)")
 labelRequirement.pack()
 
 entryRequirement = tk.Entry()

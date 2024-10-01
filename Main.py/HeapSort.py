@@ -1,9 +1,8 @@
-import LinkedList
+import List
 
 class Heap:
-    def __init__(self, linkedList: LinkedList):
-        return self.heapSort(linkedList) #PENSAR SI LLAMAR AL MÉTODO DÁNDOLE CADA LISTA POR SEPARADO
-#PUEDE QUE NO NECESITE MOSTRAR DESDE ACÁ, MÁS FÁCIL MOSTRRA EL OBJETO EN LA VISTA
+    def __init__(self, linkedList: List):
+        self.heapSort(linkedList) #PENSAR SI LLAMAR AL MÉTODO DÁNDOLE CADA LISTA POR SEPARADO
     def minHeap(self, list, lenght, i):
         
         largest = i 
